@@ -1,0 +1,16 @@
+<template>
+    <lightning-record-edit-form record-id={recordId} object-api-name="Contact" onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+        <lightning-messages></lightning-messages>
+        <lightning-output-field field-name="AccountId" if:true={isactive}></lightning-output-field>
+        <lightning-input-field field-name="AccountId" if:false={isactive}></lightning-input-field>
+        <lightning-output-field field-name="FirstName" if:true={isactive}></lightning-output-field>
+        <lightning-input-field field-name="FirstName" if:false={isactive}></lightning-input-field>
+        <lightning-output-field field-name="LastName" if:true={isactive}></lightning-output-field>
+        <lightning-input-field field-name="LastName" if:false={isactive}></lightning-input-field>
+        <lightning-output-field field-name="Email" if:true={isactive}></lightning-output-field>
+        <lightning-input-field field-name="Email" if:false={isactive}></lightning-input-field>
+        <lightning-button variant="brand" label="Edit" title="Edit" onclick={handleEdit} class="slds-m-left_x-small" if:true={isactive}></lightning-button>
+        <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Save" if:false={isactive}></lightning-button>
+    </lightning-record-edit-form>
+
+</template>

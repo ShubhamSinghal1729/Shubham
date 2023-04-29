@@ -1,0 +1,22 @@
+<aura:component>
+  <ltng:require styles="{! $Resource.select2 + '/select2-4.0.3/dist/css/select2.min.css'}" 
+      scripts="{!join(',', 
+        $Resource.jquery224 ,  
+        $Resource.select2 + '/select2-4.0.3/dist/js/select2.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="map" type="map"/>
+    <aura:attribute name="key" type="string"/>
+    <aura:attribute name="value" type="SelectOption[]"/>
+    <aura:attribute name="value1" type="Integer"/>
+    
+    <div class="slds-form-element">  
+     <label for="picklist">{!v.key}</label> <br/>
+     <select style="width:100%" id="{!v.key}" class="select2Class" multiple="multiple" >
+       <aura:iteration items="{!v.value}" var="opts">
+           <option value="{!opts.label}" text="{!opts.value}">  </option>
+       </aura:iteration>     
+     </select>
+   </div> 
+ 
+</aura:component>

@@ -1,0 +1,51 @@
+<template>
+<table aria-describedby="contact-List" class="slds-table slds-table_bordered">
+    <thead>
+        <tr class="slds-line-height_reset">
+            <th class="slds-size_1-of-4" scope="col">
+                <div class="slds-truncate" style="text-align: center;" title="First Name">First Name</div>
+            </th>
+            <th class="slds-size_1-of-4" scope="col">
+                <div class="slds-truncate" style="text-align: center;" title="Last Name">Last Name</div>
+            </th> 
+            <th class="slds-size_1-of-4" scope="col">
+                <div class="slds-truncate" style="text-align: center;" title="Primary Account">Primary Account</div>
+            </th>
+            <th class="slds-size_1-of-4" scope="col">
+                <div class="slds-trumcate" style="text-align: center;" title="Stage">Stage</div>
+            </th>                      
+        </tr>
+    </thead> 
+    <tbody>
+        <template for:each={contacts} for:item="item" for:index="indexvar">
+            <tr key={item.id} class="slds-hint-parent">
+                <td class="slds-size_1-of-4">
+                    <div class="slds-p-around_medium lgc-bg" style="background-color: orange;">
+                        <lightning-input  name="FirstName" type="text" data-index={indexvar} placeholder="First Name..." value={item.FirstName} onchange={handleonchange}></lightning-input>
+                    </div>
+                </td>
+                <td class="slds-size_1-of-4">
+                    <div class="slds-p-around_medium lgc-bg" style="background-color: orange;">
+                        <lightning-input name="LastName" type="text"  data-index={indexvar} placeholder="Last Name..." value={item.LastName} onchange={handleonchange}></lightning-input>
+                    </div>
+                </td>
+                <td class="slds-size_1-of-4">
+                    <div class="slds-p-around_large lgc-bg" style="background-color: orange;">
+                        <c-customlookup lookup-label="Account" object-api-name="account" icon-name="standard:account" 
+                        selected-record-id={item.Account__c} selected-value = {item.Account__r.Name} index = {indexvar} fieldname = "Account__c" onrecordselection={handlelookupChange}>
+                    </c-customlookup>
+                    </div>
+                </td>
+                <td class="slds-size_1-of-4">
+                    <div>
+                        <lightning-combobox name="Stage__c" value={item.Stage__c} placeholder="-Select-" options={stagevalues} onchange={handleonchange}></lightning-combobox>
+                    </div>
+                </td>
+            </tr>
+        </template>
+    </tbody>
+</table>
+<lightning-button variant="brand" label="Save" title="Primary action" onclick={handleonSave} class="slds-m-left_x-small"></lightning-button>
+<lightning-button variant="brand" label="New" title="Primary action" onclick={handleonNew} class="slds-m-left_x-small"></lightning-button>
+
+</template>

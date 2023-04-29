@@ -1,0 +1,9 @@
+<aura:component controller="app_SearchFilters">	
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <!--Declare Attributes --> 
+    <aura:attribute name="fullMap" type="map"/>
+    <aura:attribute name="lstKey" type="List"/>
+    <aura:iteration items="{!v.lstKey}" var="key" >
+        <c:app_SearchFiltersParent map="{!v.fullMap}" key="{!key}"/>
+    </aura:iteration>
+</aura:component>

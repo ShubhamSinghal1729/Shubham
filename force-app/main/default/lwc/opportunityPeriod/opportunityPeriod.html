@@ -1,0 +1,75 @@
+<template>  
+<lightning-card style="font-weight: 600;" title="Opportunity Period Data Table"> 
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover">
+    <thead>
+        <tr class="slds-line-height_reset">
+            <th scope="col">
+                <div class="slds-text-align_center" title="FORECAST PERIOD START DATE">FORECAST PERIOD START <br/> DATE</div>
+            </th>
+            <th scope="col">
+                <div class="slds-text-align_center" title="FORECAST PERIOD END DATE">FORECAST PERIOD END <br/> DATE</div>
+            </th>
+            <th scope="col">
+                <div class="slds-text-align_center" title="STRAIGHT LINE REVENUE">STRAIGHT LINE <br/> REVENUE</div>
+            </th>
+            <th scope="col">
+                <div class="slds-text-align_center" title="PROJECTED REVENUE">PROJECTED <br/> REVENUE</div>
+            </th>
+            <th scope="col">
+                <div class="slds-text-align_center" title="PRESERVE PROJECTED REVENUE">PRESERVE PROJECTED <br/> REVENUE</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <template for:each={listofOportunityPeriod} for:item="oppPeriod">
+            <tr key={oppPeriod.Id}>
+              <td data-label={oppPeriod.Start_Date__c}>
+                <div class="slds-align_absolute-center">
+                  <lightning-formatted-date-time value={oppPeriod.Start_Date__c} time-zone="UTC"></lightning-formatted-date-time>
+                </div>
+              </td>
+              <td data-label={oppPeriod.End_Date__c}>
+                <div class="slds-align_absolute-center">
+                  <lightning-formatted-date-time value={oppPeriod.End_Date__c} time-zone="UTC"></lightning-formatted-date-time>
+                </div>
+              </td>
+              <td data-label={oppPeriod.Straight_line_Revenue__c}>
+                <div class="slds-align_absolute-center">
+                  <lightning-formatted-number value={oppPeriod.Straight_line_Revenue__c} format-style="currency" currency-code={oppPeriod.CurrencyIsoCode}></lightning-formatted-number>
+                </div>
+              </td>
+              <td data-label={oppPeriod.Projected_Revenue__c}>
+                <div class="slds-align_absolute-center">
+                 <lightning-input type="number" key={oppPeriod.Id} data-id ={oppPeriod.Id} value={oppPeriod.Projected_Revenue__c} style="width: 75%" onblur={handleOnChange} required></lightning-input>
+                </div>
+              </td>
+              <td data-label={oppPeriod.Preserve_Projected_Revenue__c>
+                <div class="slds-align_absolute-center">
+                 <lightning-input type="checkbox" checked = {oppPeriod.Preserve_Projected_Revenue__c} value={oppPeriod.Preserve_Projected_Revenue__c} data-id={oppPeriod.Id} onchange={handleOnCheckBox}></lightning-input>
+                </div>
+              </td>
+            </tr>
+        </template>
+            <tr style="border-bottom: none;">
+             <td></td> 
+             <td></td>
+             <td><div class="slds-align_absolute-center slds-m-top_x-small TotalProjectedRevenueCSS">TOTAL PROJECTED REVENUE</div></td>
+             <td>
+                 <div class="slds-align_absolute-center slds-m-top_x-small">
+                  <lightning-formatted-number value={totalProjectedRevenue} format-style="decimal" class="TotalProjectedRevenueCurrencyCSS"></lightning-formatted-number>
+                 </div>  
+             </td>
+             <td></td>
+            </tr>
+    </tbody>
+</table> 
+<template if:true={totalProjectedRevenue}>
+  <div class="slds-clearfix">
+      <div class="slds-align_absolute-center slds-m-top_large">
+        <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label={toggleLabel} title="Save" onclick={handleOnSave} class="slds-m-left_x-small"></lightning-button> 
+      </div>
+   </div>
+</template>
+</lightning-card>      
+</template>

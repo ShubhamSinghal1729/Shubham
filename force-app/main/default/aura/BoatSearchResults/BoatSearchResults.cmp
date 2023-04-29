@@ -1,0 +1,13 @@
+<aura:component >
+    <article class="slds-card slds-m-bottom_large">
+        <div class="slds-media__body">
+            <div >
+                 <lightning:layout horizontalAlign="center" verticalAlign="center">
+                    <lightning:layoutItem padding="horizontal-medium" >
+                      Test test
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </div>
+    </article>
+</aura:component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>App to manage my lemonade stand.</description>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Lemonade</label>
+    <tabs>Drink_Order__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>Battle_Station__c</tabs>
+    <tabs>Resource__c</tabs>
+    <tabs>Supply__c</tabs>
+    <tabs>Discovery__c</tabs>
+</CustomApplication>

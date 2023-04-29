@@ -1,0 +1,106 @@
+<aura:component controller="lkController" access="global">
+    <!-- Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- Handler -->
+    
+    <!-- Attribute -->
+    <aura:attribute name="sobject" type="string" access="global" />                            
+    <aura:attribute name="fieldsetname" type="string" access="global" />                       
+    <aura:attribute name="sobjectDisplayName" type="string" access="global" />                 
+    <aura:attribute name="iconName" type="string" access="global" />                           
+    <aura:attribute name="iconType" type="string" access="global" />
+    <aura:attribute name="value" type="string" access="global"  default=""/>
+    <aura:attribute name="value2" type="string" access="global"  default=""/>
+    <aura:attribute name="label" type="string" access="global" />
+    <aura:attribute name="showAddButton" type="boolean" access="global" />
+    <aura:attribute name="saveAndSet" type="boolean" access="global" />
+    <aura:attribute name="queryField" type="string" access="global" />
+    <aura:attribute name="recordTypeId" type="string" access="global" default=""/> 
+    <aura:attribute name="disabledInputText" type="boolean" access="global" default="false"/>
+    <aura:attribute name="newlooupSearchValue" type="list" default="[]"/>
+    <aura:attribute name="hasError" type="Boolean" access="global" default="false"/>
+    <aura:attribute name="required" type="Boolean"  access="global" />
+    <aura:attribute name="RevenueCategoryid" type="string" default=""/>
+    <aura:attribute name="searchresult" type="list"/>
+    <aura:attribute name="displayValue" type="string" default=""/>
+    <aura:attribute name="oldValue" type="string" default=""/>
+    <aura:attribute name="obj" type="Object"/>
+    <aura:attribute name="fdata" type="string"/>
+    <aura:attribute name="lookUpRowIndex" type="string" default=""/>
+    <aura:attribute name="objv" type="Object"/>
+    <aura:attribute name="fixedField" type="string" default=""/>
+    <aura:attribute name="fixedFieldValue" type="string" default=""/>
+    <aura:attribute name="componentId" type="string" default=""/>    
+    <aura:attribute name="episodeDuplicate" type="Boolean"  access="global" />
+    <aura:attribute name="Showtitle" type="String" default=""/>
+    <aura:attribute name="showID" type="String" default=""/>
+    <!-- Attribute -->
+    
+    <!-- Handler -->
+    <aura:handler name="change" value="{!v.value}" action="{!c.valueSet}"/>
+    <!-- Handler -->
+    
+    <!-- Event Register -->
+    <aura:registerEvent name="lookUpEvent" type="c:lookUpEvent"/>    
+    <aura:registerEvent name="lookUpResetEvent" type="c:lookUpResetEvent"/>
+    <!-- Event Register -->
+    
+    <div  aura:id="loading" data-loading="true" style="width: 100%;height: 100%;position: fixed;z-index: 100000;top: 0px;left: 0px;right: 0px;bottom: 0px;margin: auto;">
+        <div style="width: 250px;height: 75px;text-align: center;position: fixed;top: 0px;left: 0px;right: 0px;bottom: 0px;margin: auto;font-size: 5px;z-index: 10;color: rgb(255, 255, 255);">
+            <div role="status" class="slds-spinner slds-spinner--medium">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div><div>Processing..</div>
+        </div>
+        <div class="bg" style="opacity: 0.7;width: 100%;height: 100%;position: absolute;top: 0px;background: rgb(0, 0, 0);"></div>
+    </div>
+    
+    <div class="slds-form-element slds-lookup slds-is-closed" data-select="single" aura:id="lookupComponent">
+        <div class="slds-form-element__control">
+            <div class="slds-input-has-icon slds-input-has-icon--right slds-size_2-of-2" aura:id="inputBar1">
+                 <b><lightning:input  name="myname" value="{!v.displayValue}"  aura:id="aaaa" onchange="{!c.setSearchString}" placeholder="{!'Search ' + v.sobjectDisplayName}" style="margin-top:-15px;" disabled="{!v.disabledInputText}"/></b>
+                    <span aura:id="outputBar" style="float:right;margin-top:-28px;">
+                        <ui:button aura:id ="selectionButton" class="slds-button slds-button--icon slds-pill__remove" press="{!c.resetThisLookUpRecord}">
+                            <lightning:icon id="{!'btns.'+v.lookUpRowIndex}" iconName="utility:close" size="large" alternativeText="sss"/>
+                            <span class="slds-assistive-text">Remove</span>
+                        </ui:button>
+                </span>
+            </div>
+        </div>
+    <div class="slds-lookup__menu">
+            <ul class="slds-lookup__list" role="listbox">
+                <aura:iteration items="{!v.searchresult}" var="res" indexVar="idx">
+                    <li role="presentation" data-record="{!idx}"  onclick="{!c.selectThisRecord}" title="{!res.Name}">
+                        <span class="slds-lookup__item-action slds-media" id="lookup-option-507" role="option">
+                            <div class="slds-media__body">
+                                <!--<div class="slds-lookup__result-text">-->
+                                    <div >
+                                    {!res.Name}
+                                </div>
+                                
+                            </div>
+                        </span>
+                    </li>
+                </aura:iteration>
+                <li role="presentation" aura:id="ajaxRequest">
+                    <div class="slds-spinner_container">
+                        <div role="status" class="slds-spinner slds-spinner--medium">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    <aura:if isTrue="{!v.hasError}">
+            <div class="slds-form-element__help">
+                <c:svgIcon svgPath="/resource/lightningcss2/assets/icons/utility-sprite/svg/symbols.svg#warning" category="utility" name="warning" />
+                <span style="color:red;">This field is required</span>
+            </div>
+        </aura:if>
+    </div>            
+	
+</aura:component>

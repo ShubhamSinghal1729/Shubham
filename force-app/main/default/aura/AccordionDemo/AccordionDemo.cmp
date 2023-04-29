@@ -1,0 +1,27 @@
+<aura:component controller="AccordionAuraController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+  <!--on component load call doInit javaScript function and fetch records from server-->  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="conList" type="List"/>
+    
+    <div class="slds-m-around_x-large">
+        
+        <lightning:accordion >
+            <aura:iteration items="{!v.conList}" var="con">
+                <lightning:accordionSection name="{!con.name}" label="{!con.Name}">
+                    <aura:set attribute="body">
+                        <p><b>Street</b> : {!con.MailingStreet}</p>
+                        <p><b>City</b> : {!con.MailingCity}</p>
+                        <p><b>State</b> : {!con.MailingState}</p>
+                        <p><b>Postcode</b> : {!con.MailingPostalcode}</p>
+                        <p><b>Country</b> : {!con.MailingCountry}</p>
+                        <p><b>Email</b> : {!con.Email}</p>
+                        <p><b>Phone</b> : {!con.Phone}</p>
+                    </aura:set>
+                </lightning:accordionSection>
+            </aura:iteration>
+        </lightning:accordion>
+        
+    </div>
+    
+</aura:component>

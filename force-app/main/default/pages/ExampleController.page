@@ -1,0 +1,7 @@
+<apex:page controller="ExampleController">
+    Time1: {!t1} <br/><br/>
+    Time-Transient: {!t2} <br/><br/>
+    <apex:form >
+        <apex:commandLink value="Refresh"/>
+    </apex:form>
+</apex:page>

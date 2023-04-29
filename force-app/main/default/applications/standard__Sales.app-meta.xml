@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>standard-Invoice</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Solution</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Fintrx_Filter__c</tabs>
+    <tabs>Filters</tabs>
+    <tabs>standard-Quote</tabs>
+    <tabs>Camping_Item__c</tabs>
+    <tabs>Expense__c</tabs>
+    <tabs>Project__c</tabs>
+    <tabs>ToDo__c</tabs>
+    <tabs>Property__c</tabs>
+    <tabs>Session__c</tabs>
+    <tabs>Speaker__c</tabs>
+    <tabs>Animal__c</tabs>
+    <tabs>Drink_Order__c</tabs>
+    <tabs>Battle_Station__c</tabs>
+    <tabs>Resource__c</tabs>
+    <tabs>Supply__c</tabs>
+    <tabs>Discovery__c</tabs>
+</CustomApplication>

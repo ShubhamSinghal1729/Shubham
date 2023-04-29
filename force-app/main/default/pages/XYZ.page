@@ -1,0 +1,244 @@
+<apex:page >
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta name="generator" content="Aspose.Words for .NET 17.1.0.0"/>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <table cellspacing="0" cellpadding="0" style="margin-left:6.35pt; border-collapse:collapse">
+                <tr style="height:129.3pt">
+                    <td style="width:295.65pt; border-top:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0.3pt; margin-bottom:0pt; widows:0; orphans:0; font-size:6pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-left:57pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <img src="a9dei-5he1p.001.jpeg" width="250" height="154" alt="C:\Users\ICD Office Assistant\Pictures\Logos\pension-logo_thumb.jpg" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"/>
+                        </p>
+                    </td>
+                    <td style="width:208.5pt; border-top:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0.55pt; margin-bottom:0pt; widows:0; orphans:0; font-size:27pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                        <p style="margin:0pt 35.65pt 0pt 41.25pt; text-align:center; widows:0; orphans:0; font-size:20pt">
+                            <span style="font-family:Calibri; font-weight:bold; color:#3a5e91">DEPOSIT</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:1.25pt; color:#3a5e91"></span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.2pt; color:#3a5e91">SLIP</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:24.55pt">
+                    <td style="width:295.65pt; vertical-align:top">
+                        <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                    </td>
+                    <td style="width:208.5pt; vertical-align:top">
+                        <p style="margin:4.4pt 35.9pt 0pt 36pt; text-align:center; widows:0; orphans:0; font-size:11pt">
+                            <span style="font-family:Calibri; font-weight:bold">PensionTransactionDeposit.Deposit</span>
+                            <span style="font-family:Calibri; font-weight:bold">Date</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:77.1pt">
+                    <td style="width:295.65pt; vertical-align:top">
+                        <p style="margin:4.7pt 91pt 0pt 96.55pt; text-align:center; widows:0; orphans:0; font-size:11pt">
+                            <span style="font-family:Calibri; font-weight:bold">13300</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:0.65pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold">Olio</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:0.65pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold">Rd</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:3.45pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold">STE</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:0.65pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.25pt">340</span>
+                        </p>
+                        <p style="margin:1.3pt 90.95pt 0pt 96.55pt; text-align:center; widows:0; orphans:0; font-size:11pt">
+                            <span style="font-family:Calibri; font-weight:bold">Fishers</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:0.7pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold">IN</span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:3.7pt"></span>
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">46037</span>
+                        </p>
+                        <p style="margin:1.35pt 91pt 0pt 96.55pt; text-align:center; widows:0; orphans:0; font-size:11pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">317.774.3954</span>
+                        </p>
+                        <p style="margin:0pt 81.45pt 0pt 87.1pt; text-indent:0.05pt; text-align:center; line-height:14.5pt; widows:0; orphans:0">
+                            <a href="mailto:wpf@wesleyan.org" style="text-decoration:none">
+                                <span style="font-family:Calibri; font-size:11pt; font-weight:bold; letter-spacing:-0.1pt; color:#000000">wpf@wesleyan.org</span>
+                            </a>
+                            <span style="font-family:Calibri; font-size:11pt; font-weight:bold; letter-spacing:-0.1pt">wesleyanpensionfund.com</span>
+                        </p>
+                    </td>
+                    <td style="width:208.5pt; vertical-align:top">
+                        <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                <span style="height:0pt; display:block; position:absolute; z-index:-1">
+                    <img src="a9dei-5he1p.003.png" width="673" height="59" alt="" style="margin-top:435.84pt; margin-left:5.95pt; -aw-left-pos:53.95pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:709.05pt; -aw-wrap-type:none; position:absolute"/>
+                </span>
+                <span style="height:0pt; display:block; position:absolute; z-index:-2">
+                    <img src="a9dei-5he1p.002.png" width="672" height="131" alt="" style="margin-top:-237.16pt; margin-left:5.6pt; -aw-left-pos:53.6pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:36pt; -aw-wrap-type:none; position:absolute"/>
+                </span>
+                <span style="font-family:'Times New Roman'">&#xa0;</span>
+            </p>
+            <p style="margin-top:0.35pt; margin-bottom:0.05pt; widows:0; orphans:0; font-size:10pt">
+                <span style="font-family:'Times New Roman'">&#xa0;</span>
+            </p>
+            <table cellspacing="0" cellpadding="0" style="width:504.8pt; margin-left:6.1pt; border-collapse:collapse">
+                <tr style="height:18.8pt">
+                    <td style="width:267pt; border-top-style:double; border-top-width:1.5pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top; background-color:#e3eaf4">
+                        <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border-top-style:double; border-top-width:1.5pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top; background-color:#e3eaf4">
+                        <p style="margin-top:3.85pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.2pt">CODE</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border-top-style:double; border-top-width:1.5pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top; background-color:#e3eaf4">
+                        <p style="margin-top:3.85pt; margin-right:12.9pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">AMOUNT</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:18.95pt">
+                    <td style="width:267pt; border-top:0.75pt solid #3a5e91; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:5.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold">20-4500</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border-top:0.75pt solid #3a5e91; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:10.2pt; margin-bottom:0pt; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.25pt">Employer Contribution</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border-top:0.75pt solid #3a5e91; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:10.35pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">SUM [</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">Pension</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">TransactionDeposit.</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">Employer</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">Contribution] for all pension transaction deposit items</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:18.4pt">
+                    <td style="width:267pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.05pt; margin-right:5.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold">20-4600</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.05pt; margin-right:10.35pt; margin-bottom:0pt; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.25pt">Employee Contribution</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom-style:solid; border-bottom-width:0.75pt; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:10.35pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri">SUM [</span>
+                            <span style="font-family:Calibri">PensionTransactionDeposit.Employee</span>
+                            <span style="font-family:Calibri">Contribution] for all pension transaction deposit items</span>
+                        </p>
+                        <p style="margin-top:3.05pt; margin-right:10.35pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri">&#xa0;</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:28.3pt">
+                    <td style="width:267pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:10.6pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">SUBTOTAL</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border-top-style:solid; border-top-width:0.75pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.3pt; margin-right:10.35pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">SUM (</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">Employer Contribution Total + Employee Contribution Total)</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:97.75pt">
+                    <td style="width:267pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0.3pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10.5pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-right:5.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold">20-1480</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-right:5.3pt; margin-bottom:0pt; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold">Contact.Name</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0.3pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10.5pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-right:10.55pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">HOLDS</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-right:10.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri">PensionTransactionDepositItem.Total</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border-right:0.75pt solid #3a5e91; border-left:0.75pt solid #3a5e91; border-bottom:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:0.3pt; margin-bottom:0pt; widows:0; orphans:0; font-size:10.5pt">
+                            <span style="font-family:'Times New Roman'">&#xa0;</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-right:10.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; letter-spacing:-0.2pt">PensionTransactionDeposit.On</span>
+                            <span style="font-family:Calibri; letter-spacing:-0.2pt">Hold Amount)</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:18.65pt">
+                    <td style="width:267.38pt; border-top:0.75pt solid #3a5e91; border-right:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:4.35pt; margin-right:5.3pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold">&#xa0;</span>
+                        </p>
+                    </td>
+                    <td style="width:139.4pt; border:0.75pt solid #3a5e91; vertical-align:middle">
+                        <p style="margin-top:3.4pt; margin-right:10.6pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.25pt">FEE</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border:0.75pt solid #3a5e91; vertical-align:middle">
+                        <p style="margin-top:3.4pt; margin-right:10.3pt; margin-bottom:0pt; text-align:center; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri">PensionTransactionDeposit.Fee</span>
+                            <span style="font-family:Calibri">Amount</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:18.65pt">
+                    <td colspan="2" style="width:407.52pt; border-right:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:4.35pt; margin-right:5.55pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; font-weight:bold; letter-spacing:-0.1pt">TOTAL</span>
+                        </p>
+                    </td>
+                    <td style="width:95.4pt; border:0.75pt solid #3a5e91; vertical-align:top">
+                        <p style="margin-top:3.4pt; margin-right:10.35pt; margin-bottom:0pt; text-align:right; widows:0; orphans:0; font-size:9pt">
+                            <span style="font-family:Calibri; letter-spacing:-0.1pt">Subtotal - Fee</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p style="margin-top:0pt; margin-bottom:0pt; widows:0; orphans:0; font-size:11pt">
+                <span style="font-family:Calibri">&#xa0;</span>
+            </p>
+        </div>
+    </body>
+</html>
+
+</apex:page>

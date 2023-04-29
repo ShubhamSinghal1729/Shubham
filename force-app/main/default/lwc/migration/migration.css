@@ -1,0 +1,19 @@
+.tablecls {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tablecls td{
+    background-color: #9fd0df25;
+    padding: 25px;
+}
+.tablecls tr:hover {
+    background-color: rgba(28, 227, 241, 0.534);
+}
+.tablecls th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(20, 75, 228, 0.925);
+    color: rgb(255, 255, 255);
+}

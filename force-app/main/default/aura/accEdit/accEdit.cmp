@@ -1,0 +1,52 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    
+    <aura:attribute name="account" type="Object" 
+                    description="The record object to be displayed"/>
+    <aura:attribute name="accountRecord" type="Object" 
+                    description="A simplified view record object to be displayed"/>
+    <aura:attribute name="recordSaveError" type="String" 
+                    description="An error message bound to force:recordData"/>
+    
+    <force:recordData aura:id="accRec" 
+                      layoutType="FULL" 
+                      recordId="{!v.recordId}"  
+                      targetError="{!v.recordSaveError}"
+                      targetRecord="{!v.account}"
+                      targetFields="{!v.accountRecord}"
+                      mode="EDIT"
+                      recordUpdated="{!c.recordUpdated}"/>
+    
+    <div class="slds-box"> 
+        <div class="slds-text-heading_medium">
+            Edit Account - Data Service
+        </div> 
+        <div class="slds-form--stacked slds-tile"> 
+            <div class="slds-form-element">
+                <label class="slds-form-element__label"  >Name: </label>
+                <div class="slds-form-element__control">
+                    <lightning:input label="Account Name" value="{!v.accountRecord.Name}"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label"  >Company Email: </label>
+                <div class="slds-form-element__control">
+                    <ui:inputText aura:id="companyEmail"  class="slds-input"  
+                                  value="{!v.accountRecord.Company_Email__c}"
+                                  required="true"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <lightning:button label="Save Account" variant="brand" onclick="{!c.saveAccount}"/>          
+            </div>
+        </div>	
+        
+        <aura:if isTrue="{!not(empty(v.recordSaveError))}">
+            <br />
+            <div class="recordError">
+                {!v.recordSaveError}
+            </div> 
+        </aura:if>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+<template>
+        <lightning-input value={searchString} onchange={retrieveContacts}></lightning-input>
+
+<template for:each={contactList} for:item="con">
+    <li key={con.id}>
+        <lightning-input name = {con.id} value={con.Name} onchange={handleOnChange}></lightning-input>
+    </li>
+
+
+</template>
+
+</template>

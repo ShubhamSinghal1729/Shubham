@@ -1,0 +1,83 @@
+<apex:page Controller="SmartyStreetAPI" >
+    <apex:slds />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <apex:form id="mainForm">
+        <input type="hidden" id="commaSepLeadIds" />
+        <input type="text" id="inp2" placeholder="Search..." onKeyup="search(this); return false;" class="slds-input"/>
+        <table class="slds-table slds-table_bordered">
+            <tbody id="tablePanel">
+            </tbody>
+        </table>
+        <script>
+        var lstid = [];
+        
+        function save(value){
+            alert('@@@@@'+save);
+            }
+        
+        function search(searchText) {
+            var arr;
+            if (searchText != null && searchText != '') {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.SmartyStreetAPI.getRecords}', searchText.value,
+                    function (result, event) {
+                        var state = event.status;
+                        if (state) {
+                            if (result.length > 0) {
+                                console.log(result.length);
+                                arr = [];
+                                for (var i = 0; i < result.length; i++) {
+                                    arr.push({
+                                        label: result[i],
+                                        value: result[i]
+                                    });
+                                }
+                            }
+                        }
+                        callAutocomplete1(arr);
+                    }, 120000, {
+                        escape: true
+                    });
+            }
+        }
+        
+        function callAutocomplete1(arr) {
+            $("input#inp2").autocomplete({
+                source: arr,
+                select: function (event, ui) {
+                    var Id = ui.item.value;
+                    var value = ui.item.label;
+                    addSelectedOption(value, Id);
+                    setTimeout(() => {
+                        $("#inp2").val("");
+                    }, 100)
+                        
+                    }});
+                        
+                    }
+                        
+                        function addSelectedOption(Id, Name) {
+                        document.getElementById('tablePanel').innerHTML += `<tr id="${Id}"><td>${Id}</td> <td><a href="javascript:void(0)" onclick="removeRecord('${Id}')">X</a></td></tr>`;
+                        console.log('>>>>>>',lstid.filter((v) => v.value != Id));
+                        lstid.push({label: Name,value: Id});
+                    
+                }
+                
+                function removeRecord(id) {
+                alert('@@@@@@'+id);
+                var arrRecords = document.querySelectorAll("#tablePanel tr");
+                var ulElem = document.querySelector("#tablePanel");
+                lstid = lstid.filter((v) => v.value != id);
+                
+                for(var i = 0; i < arrRecords.length; i++) {
+                if(arrRecords[i].getAttribute("id") == id) {
+                ulElem.removeChild(ulElem.childNodes[i])
+                return false;
+            }
+                                         }                
+                                         }
+                                         </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page sidebar="false" showHeader="false" >
+ <apex:includeLightning />
+
+    <div id="vf-app" /> 
+    <script>
+    $Lightning.use("c:app_SearchFiltersApp", function() {
+        $Lightning.createComponent("c:app_SearchFilters",
+                                   {},
+                                   "vf-app",
+                                   function(cmp) {
+          
+        });
+    });
+    </script>
+</apex:page>

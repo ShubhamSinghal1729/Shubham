@@ -1,0 +1,139 @@
+<template> 
+        <div class="slds-box slds-theme_shade">  
+          <lightning-button label="Show Insatnces" onclick={showInstances}> </lightning-button>  
+        </div>  
+        <template if:true={openInstance}>  
+          <div class="slds-modal slds-fade-in-open slds-backdrop">  
+            <div class="slds-modal__container">  
+              <div class="slds-modal__header">  
+                <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  
+                  variant="bare-inverse" onclick={closeInsatnces} class="slds-modal__close">  
+                </lightning-button-icon>  
+                <h2>Which Instance data you want?</h2>  
+              </div>  
+              <div class="slds-modal__content slds-p-around_medium"> 
+                  Instance = {instance}          
+                <select class="slds-select" name = "instanceSelect" onchange={selectedinstances}>
+                    <option value="">None</option>
+                    <template for:each={listofInstance} for:item="ins">
+                    <option value={ins} key={ins}>{ins}</option>
+                    </template>
+                </select>            
+              </div>  
+              <div class="slds-modal__footer">  
+                <lightning-button label="Previous " variant="brand" onclick={closeInsatnces}></lightning-button>
+                <lightning-button label=" Next" variant="brand" onclick={showObject}></lightning-button>  
+              </div>  
+            </div>  
+          </div>  
+        </template> 
+        <template if:true={openObject}>  
+            <div class="slds-modal slds-fade-in-open slds-backdrop">  
+              <div class="slds-modal__container">  
+                <div class="slds-modal__header">  
+                  <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  
+                    variant="bare-inverse" onclick={closeObject} class="slds-modal__close">  
+                  </lightning-button-icon>  
+                  <h2>Which Object data you want?</h2>  
+                </div>  
+                <div class="slds-modal__content slds-p-around_medium"> 
+                    Object = {object}          
+                  <select class="slds-select" name = "objectSelect" onchange={selectedObject}>
+                      <option value="">None</option>
+                      <template for:each={listofObject} for:item="obj">
+                      <option value={obj} key={obj}>{obj}</option>
+                      </template>
+                  </select>            
+                </div>  
+                <div class="slds-modal__footer">  
+                  <lightning-button label="Previous" variant="brand" onclick={closeObject}></lightning-button>
+                  <lightning-button label="Next" variant="brand" onclick={showdata}></lightning-button>
+                </div>  
+              </div>  
+            </div>  
+          </template>  
+
+        <div class="slds-m-around_medium">
+                <template if:true={data}>
+                    <div>
+                        {data.totalSize}
+                        {data.records.size}
+                    </div>
+                    
+                  <!--  <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                  -->   <table class="tablecls">
+                        <thead class="tablecls th">
+                            <tr class="slds-line-height_reset">
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="S.No.">
+                                        S.No.
+                                    </div>
+
+                                </th>
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="Id">
+                                        Id
+                                    </div>
+                                </th>
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="CloseDate">
+                                        CloseDate
+                                    </div>
+                                </th>
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="Technology Record Type Id">
+                                        Technology Record Type Id
+                                    </div>
+                                </th>
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="Technology Opportunity Id">
+                                        Technology Opportunity Id
+                                    </div>
+                                </th>
+                                <th class="tablecls th" scope="col">
+                                    <div class="slds-truncate" title="Technology Stage">
+                                        Technology Stage
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={datatoshow} for:item="opp">
+                                <tr key={opp.label}>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-number value={opp.label}></lightning-formatted-number>
+                                    </div>
+                                </th>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-text value={opp.value.Id}></lightning-formatted-text>
+                                    </div>
+                                </th>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-date-time value={opp.value.CloseDate}></lightning-formatted-date-time>
+                                    </div>
+                                </th>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-text value={opp.value.Technology_RecordTypeId}></lightning-formatted-text>
+                                    </div>
+                                </th>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-text value={opp.value.Technology_Opportunity_ID}></lightning-formatted-text>
+                                    </div>
+                                </th>
+                                <th scope="col" class="tablecls th">
+                                    <div>
+                                        <lightning-formatted-text value={opp.value.Technology_Stage}></lightning-formatted-text>
+                                    </div>
+                                </th>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </template> 
+        </div>
+        </template>

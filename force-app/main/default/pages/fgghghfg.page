@@ -1,0 +1,54 @@
+<apex:page controller="Attachmentsviewcontroller" showHeader="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script>
+                    $.noConflict();
+                    jQuery(document).ready(function() {
+                        jQuery.extend(jQuery.expr[":"], {
+                            "containsIN": function(elem, i, match, array) {
+                                return (elem.textContent || elem.innerText || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                            }
+                        });
+
+                        jQuery(document).on("keyup", ".searchbynameautsearch", function() {
+                            jQuery('.list tbody tr').each(function() {
+                                jQuery(this).css("display", "table-row");
+                            })
+
+                            var searchterm = jQuery(this).val();
+
+                            if (searchterm.length > 0) {
+                                var lmatch = jQuery('.list tbody tr').text();
+
+                                var match = jQuery('.list tbody tr:containsIN("' + searchterm + '")');
+
+                                var nomatch = jQuery('.list tbody tr:not(:containsIN("' + searchterm + '"))');
+
+                                match.addClass('selected');
+
+                                nomatch.css("display", "none");
+
+                            } else {
+
+                                jQuery('.list tbody tr').css("display", "");
+
+                                jQuery('.list tbody tr').removeClass('selected');
+
+                            }
+
+                        });
+
+                    });
+                </script>
+                
+    <apex:form ><br/><br/>
+        Search records :<apex:inputText value="{!recnamesearch}" styleClass="searchbynameautsearch serchfld" style="padding-left:5px;" />
+        <apex:pageblock id="account" title="Attachments" >
+            <apex:pageblockTable value="{!att}" var="a">
+                <apex:column value="{!a.Name}" headerValue="File Name"/>
+                <apex:column value="{!a.id }" headerValue="Size"/>
+            </apex:pageblockTable>
+        </apex:pageblock>
+    
+    </apex:form>
+        
+</apex:page>

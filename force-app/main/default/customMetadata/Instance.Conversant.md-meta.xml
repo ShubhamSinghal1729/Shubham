@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Conversant</label>
+    <protected>false</protected>
+    <values>
+        <field>ClientId__c</field>
+        <value xsi:type="xsd:string">3MVG9n_HvETGhr3AYnWpIcXxU212UCKqxsL7MOrtRMt_tGutZhEsZU2XN2kgqAsr_Ps_228_khkgDXCYTaQst</value>
+    </values>
+    <values>
+        <field>ClientSecret__c</field>
+        <value xsi:type="xsd:string">5381EA60073D22E16771CEFFE6452576BDFADA0563B80851A059AE5C5947D258</value>
+    </values>
+    <values>
+        <field>Object__c</field>
+        <value xsi:type="xsd:string">Opportunity;OpportunitylineItem</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">Sapient@12345EmyAajNVY3dfT2sKOG8oTTBJ</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">shubham.singhal@einstein.com</value>
+    </values>
+</CustomMetadata>

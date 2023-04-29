@@ -1,0 +1,54 @@
+<aura:component controller="IntercomServerController">
+<aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+<aura:attribute name="response" type="JSON2Apex"/>
+<aura:attribute name="columns" type="List"/>
+<!--<lightning:datatable keyField="id" data="{!v.response.users}" columns="{!v.columns}"  hideCheckboxColumn="true"/> 
+-->
+<aura:iteration items="{!v.response.users}" var="item">
+{!item.type_Z}
+{!item.id}
+{!item.user_id}
+{!item.anonymous}
+{!item.email}
+{!item.phone}
+{!item.name}
+{!item.pseudonym}
+{!item.avatar.type_Z}
+{!item.avatar.image_url}
+{!item.app_id}
+{!item.Companies_Z}
+<aura:iteration items="{!item.Companies_Z.companies}" var="company">
+    
+</aura:iteration>   
+    {!item.Location_data.type_Z}
+    {!item.Location_data.city_name}
+    {!item.Location_data.continent_code}
+    {!item.Location_data.country_name}
+    {!item.Location_data.postal_code}
+    {!item.Location_data.region_name}
+    {!item.Location_data.timezone}
+    {!item.Location_data.country_code}
+    {!item.Location_data.latitude}
+    {!item.Location_data.longitude}
+    {!item.last_request_at}
+    {!item.created_at}
+    {!item.remote_created_at}
+    {!item.signed_up_at}
+    {!item.updated_at}
+    {!item.session_count}
+    {!item.social_profiles.type_Z}
+    <aura:iteration items="{!item.social_profiles.social_profiles}" var="company">
+        
+    </aura:iteration>
+    {!item.owner_id}
+    {!item.unsubscribed_from_emails}
+    {!item.marked_email_as_spam}
+    {!item.has_hard_bounced}
+    {!item.tags.type_Z}
+    <aura:iteration items="{!item.tags.tags}" var="tag">
+    </aura:iteration>
+    {!item.segments.type_Z}
+    <aura:iteration items="{!item.segments.segments}" var="segment">
+    </aura:iteration>
+    </aura:iteration>
+</aura:component>

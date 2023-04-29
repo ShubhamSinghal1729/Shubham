@@ -1,0 +1,23 @@
+.THIS .word_wrap {
+      width: 250px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    
+}
+
+.THIS .slds-icon {
+    fill: black;
+    height : 1rem;
+    width : 1rem;
+}
+.THIS.hideStuff{
+    display: none;
+}
+
+.THIS.showStuff{
+    display: block;
+}
+.THIS.textWidth{
+    width:auto;
+}

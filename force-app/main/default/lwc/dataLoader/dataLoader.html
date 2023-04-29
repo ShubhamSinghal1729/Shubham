@@ -1,0 +1,98 @@
+<!--
+  @description       : 
+  @author            : Shubham Singhal
+  @group             : 
+  @last modified on  : 04-03-2023
+  @last modified by  : Shubham Singhal
+-->
+<template>
+  <template if:false={isPopup}>
+      <div class="slds-clearfix slds-align_absolute-center" style="background-color:white; height:100%">
+        <lightning-layout-item padding="around-small" size="3">
+        <img src={salesforceicon}>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="3">
+        <ul class="slds-button-group-row">
+          <lightning-button variant="brand" label="Insert" title="Insert" onclick={Insert}  class="slds-button-group-item" disabled="true"></lightning-button>
+          <lightning-button variant="brand" label="Update" title="Update" onclick={Update}  class="slds-button-group-item" disabled="true"></lightning-button>
+          <lightning-button variant="brand" label="Upsert" title="Upsert" onclick={Upsert}  class="slds-button-group-item" disabled="true"></lightning-button>
+          <lightning-button variant="brand" label="Export" title="Export" onclick={Export} class="slds-button-group-item" ></lightning-button>
+        </ul>
+        </lightning-layout-item>
+      </div>
+  </template>
+  <template if:true={isPopup}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+          <template if:true = {isObjectPage}>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Please select object to proceed</h2>
+          </template>
+          <template if:true = {isQueryPage}>
+            <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Please select fields to proceed</h2>
+          </template>
+        </header>
+        <template if:true = {isObjectPage}>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">             
+            <ul class="slds-m-around_medium">
+              <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Search Object" placeholder="Search Object..." value={selectedObject} onchange={SearchObject}></lightning-input>
+              </div>
+              <template for:each={objectstoshow} for:item="obj">
+                <li key={obj.Name}>
+                  <div class="slds-form-element__control">
+                    <input type="text" readonly="" placeholder="" class="slds-input" value={obj.Name} onclick={handleSelectObject}/>
+                  </div>
+                  </li>
+                </template>
+              </ul>
+            </div>
+            <!-- Modal/Popup Box LWC footer starts here -->
+            <footer class="slds-modal__footer">
+                <lightning-button variant="brand" label="Previous" title="Previous" onclick={Previous} class="slds-m-left_x-small" disabled={ishideprevious}></lightning-button>
+                <lightning-button variant="brand" label="Next" title="Next" onclick={Next} class="slds-m-left_x-small" disabled={ishideNext}></lightning-button>
+            </footer> 
+          </template>
+          <template if:true={isQueryPage}>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+             <div>             
+                <lightning-textarea value={query} style="width:100%;">                             
+                </lightning-textarea>
+             </div>
+             <div>
+              <table>
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th class="slds-size_1-of-2" scope="col">
+                    </th>
+                    <th class="slds-size_1-of-2" scope="col">
+                    </th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  <template for:each={fields} for:item="fiel">
+                    <tr key={fiel.Name}>
+                      <td class="slds-size_1-of-2">
+                        <lightning-input name = {fiel.Name} type="checkbox" checked = {fiel.Selected} data-index={indexvar} onchange = {handleSelectedField} style="float:left"></lightning-input>
+                      </td>
+                      <td class="slds-size_1-of-2">
+                        <input type="text" readonly="" placeholder="" class="slds-input" value={fiel.Name} style="float:right"/>
+                      </td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+             </div>
+            </div>           
+          </template>
+        </div>
+    </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>
+<!--</div> -->
+</template>

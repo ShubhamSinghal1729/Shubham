@@ -1,0 +1,3 @@
+<apex:page controller="CanoticCaseSiteController">
+    {!test}
+</apex:page>
