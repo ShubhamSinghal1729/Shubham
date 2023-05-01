@@ -11,7 +11,6 @@ public with sharing class contactApexController {
          }else{
            Contact contactObj = new Contact();
            contactObj.FirstName = '';
-           contactObj.LastName = '';
            contactObj.AccountId = accountId;
            listofContact.add(contactObj);
            return listofContact;
